@@ -196,5 +196,5 @@ kubectl get pods -o wide >> k8s_proof.txt
 
 ## 💼 Author
 
-**Abdelrahman El Ashry**
+**Hassan Elhabbal**
 Aspiring DevOps Engineer focused on building reliable and production-ready systems.
