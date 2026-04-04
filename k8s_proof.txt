@@ -1,0 +1,23 @@
+--- Task 1: nodeName Pod ---
+NAME            READY   STATUS              RESTARTS   AGE   IP       NODE       NOMINATED NODE   READINESS GATES
+static-pinned   0/1     ContainerCreating   0          53s   <none>   minikube   <none>           <none>
+
+--- Task 2: NodeSelector & Pending Status ---
+NAME            READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+selector-demo   1/1     Running   0          92s   10.244.0.22   minikube   <none>           <none>
+NAME               READY   STATUS    RESTARTS   AGE
+pending-selector   0/1     Pending   0          62s
+
+--- Task 3: NoExecute Eviction Proof ---
+NAME       READY   STATUS    RESTARTS   AGE
+evict-me   1/1     Terminating         0          10s
+
+--- Task 5: QoS Classes Verification ---
+besteffort-pod	BestEffort
+burstable-pod	Burstable
+guaranteed-pod	Guaranteed
+
+--- Task 7: Static Pod Proof ---
+static-nginx-minikube   1/1     Running   1          115s   10.244.0.48   minikube   <none>           <none>
+static-nginx-minikube   0/1     Terminating   1 (62s ago)   35s
+static-nginx-minikube   0/1     Terminating   1 (62s ago)   35s

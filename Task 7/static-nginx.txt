@@ -1,0 +1,10 @@
+sudo tee /etc/kubernetes/manifests/static-nginx.yaml << 'EOF'
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+EOF
